@@ -5,7 +5,6 @@ import Register from './screens/Register';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Login />
-    <Register />
+    <Login /> 
   </StrictMode>,
 )

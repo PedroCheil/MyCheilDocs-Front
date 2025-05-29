@@ -1,0 +1,34 @@
+.containerLogin{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    
+    .containerImage{
+        width: 40%;
+        border: 1px solid red;
+    }
+
+    .containerForm{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid green;
+        align-items: center;
+        justify-content: center;
+
+        .formLogo{
+            margin-bottom: 45px;
+        }
+
+        .form{
+            .formLogin{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        
+    }
+}
