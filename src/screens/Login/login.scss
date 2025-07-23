@@ -20,20 +20,51 @@
 
     .containerForm{
         width: 50%;
+        height: auto;
         display: flex;
         flex-direction: column;
-        border: 1px solid green;
+        //border: 1px solid green;
         align-items: center;
         justify-content: center;
 
+        /*
         .formLogo{
             margin-bottom: 45px;
         }
+        */
 
         .form{
+            display: flex;
+            align-content: center;
+            justify-content: center;
+           // border: 1px solid blueviolet;
+            width: 40%;
             .formLogin{
                 display: flex;
                 flex-direction: column;
+                justify-content: start;
+                width: 100%;
+
+                label{
+                    font-size: 1.8em;
+                    font-weight: 200;
+                    padding: 12px 0px;
+                }
+                input{
+                    border: none; 
+                    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+                    padding: 8px 4px;
+                    border-radius: 4px;
+                    outline: none;
+                    font-size: 1em;
+                    font-weight: 100;
+                }
+
+                span{
+                    margin-top: 12px;
+                    font-size: 0.7em;
+                    font-weight: 100;
+                }
             }
         }
         
