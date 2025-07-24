@@ -57,7 +57,6 @@ function Login() {
         <img src={AssetLogin} alt="Imagens animado do mycheil docs" />
       </div>
       <div className="containerForm">
-        <div className="formLogo"></div>
         <div className="form">
           <form method="post" className="formLogin" onSubmit={handleLogin}>
             <label htmlFor="email">Usuario</label>
@@ -83,6 +82,7 @@ function Login() {
             <div className="buttonForm">
               <button>Logar</button>
             </div>
+            
             <div className="alertForm">
               {alert && (
                 <AlertMessage
