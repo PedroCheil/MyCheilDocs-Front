@@ -1,8 +1,12 @@
+import { Link } from "react-router-dom";
+
 import AssetLogin from "../../assets/SamsungDevices.jpg";
 import Man from "../../assets/userImage/man.png";
 import Woman from "../../assets/userImage/woman.png";
 import userDefaulth from "../../assets/userImage/userDefaulth.png";
+
 import "./register.scss";
+
 function Register() {
 
     const userEmoji = [{
@@ -63,8 +67,8 @@ function Register() {
                         </div>
 
                         <div className="containerLink">
-                            <span>Ja tem conta? <a href="/login">
-                            <b>click aqui</b></a></span>
+                            <span>Ja tem conta? <Link to="/">
+                            <b>click aqui</b></Link></span>
                         </div>
                         
                     </form>
