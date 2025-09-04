@@ -41,7 +41,7 @@ function Login() {
 
         const saveToken = res.data.token;
         setToken(saveToken);
-        localStorage.setItem("token", token);
+        localStorage.setItem("token", saveToken);
         navigate("/feed");
     } catch (error) {
         alertMessage();
@@ -77,10 +77,19 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
               required
             />
-            <span>*Esqueceu a senha?</span>
+            <span>* Esqueceu a senha?</span>
 
             <div className="buttonForm">
               <button>Logar</button>
+            </div>
+
+            <div className="containerDivider">
+              <div className="divider"></div>
+            </div>
+
+            <div className="containerLink">
+              <span>Ja tem conta? <a href="/register">
+              <b>click aqui</b></a></span>
             </div>
             
             <div className="alertForm">

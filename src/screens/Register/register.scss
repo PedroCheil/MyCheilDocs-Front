@@ -1,47 +1,47 @@
-.containerLogin{
-    display: flex;
-    align-items: center;
+.containerRegister{
+    //background-color: red;
+    color: white;
     width: 100%;
     height: 100vh;
+    display: flex;
     box-sizing: border-box;
-    
+
     .containerImage{
         width: 50%;
         height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
-
-        img{
+          img{
             width: 100%;
             height: 100%;
         }
     }
 
-    .containerForm{
+    .containerFormRegister{
         width: 50%;
-        height: auto;
+        height: 100vh;
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
-
+        //border: 1px solid red;
 
         .form{
-            display: flex;
-            align-content: center;
-            justify-content: center;
+            //border: 1px solid red;
             width: 40%;
-            .formLogin{
+            height: auto;
+
+            form{
                 display: flex;
                 flex-direction: column;
                 justify-content: start;
                 width: 100%;
-
+                
                 label{
                     font-size: 1.8em;
                     font-weight: 200;
                     padding: 12px 0px;
+                    color: #111111;
                 }
                 input{
                     border: none; 
@@ -53,11 +53,16 @@
                     font-weight: 100;
                     color: #111111;
                 }
-
-                span{
-                    margin-top: 12px;
-                    font-size: 0.7em;
+                select{
+                    border: none; 
+                    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+                    padding: 8px 8px;
+                    border-radius: 4px;
+                    outline: none;
+                    font-size: 1em;
                     font-weight: 100;
+                    color: #111111;
+
                 }
 
                 .buttonForm{
@@ -81,9 +86,7 @@
                             color: #FFF;
                     }
                 }
-            }
-
-            .containerDivider{
+                .containerDivider{
                     width: 100%;
                     display: flex;
                     align-items: center;
@@ -100,15 +103,16 @@
                 .containerLink{
                     text-align: center;
                     color: #000000;
-                    font-size: 1.5em;
-                    font-weight: 500;
 
                     a{
                         text-decoration: none;
                         color: #2DC0E9;
                     }
                 }
+
+            }
         }
-        
+
     }
+    
 }
