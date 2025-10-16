@@ -1,9 +1,10 @@
+import React, { useEffect, useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import AlertMessage from "../../components/alertMessage";
+
 import AssetLogin from "../../assets/SamsungDevices.jpg";
 import "./login.scss";
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import AlertMessage from "../../components/alertMessage";
 
 function Login() {
   const navigate = useNavigate();
@@ -88,8 +89,8 @@ function Login() {
             </div>
 
             <div className="containerLink">
-              <span>Ja tem conta? <a href="/register">
-              <b>click aqui</b></a></span>
+              <span>Ja tem conta? <Link to="/register">
+              <b>click aqui</b></Link></span>
             </div>
             
             <div className="alertForm">
