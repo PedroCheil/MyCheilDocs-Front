@@ -1,26 +1,15 @@
-import { useNavigate, data, Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import React, {useEffect, useState} from "react";
 
 import AssetLogin from "../../assets/SamsungDevices.jpg";
-import Man from "../../assets/userImage/man.png";
-import Woman from "../../assets/userImage/woman.png";
-import userDefault from "../../assets/userImage/userDefault.png";
 import axios from "axios";
 
 import "./register.scss";
-/* 
-const userEmoji = [{
 
-    "default": userDefault,
-    "man" : Man,
-    "woman" : Woman
-}];
-*/
 
 function Register() {
     const navigate = useNavigate();
     const [jobTitle, setJobTitle] = useState([]);
-    const [selectedJob, setSelectedJob] = useState("");
     const [message, setMessage] = useState("");
     const [user, setUser] = useState({
         name_user: "",
@@ -39,27 +28,20 @@ function Register() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(user);
         try {
             const res = await axios.post("http://localhost:5000/mycheil/user", user);
             setMessage("Usuario registrado com sucesso!");
-            console.log(res.data);
-            useNavigate("/feed");
+            navigate("/login");
 
         } catch (error) {
             setMessage("Erro ao registrar usuario");
-            console.log(error);
         }
-    }
-
+    }   
 
     useEffect(() => {
         axios.get("http://localhost:5000/mycheil/job-position").then((res) => setJobTitle(res.data.jobs)).catch((error) => console.log(error));
-        console.log(data)
-        //console.log(jobTitle)
     }, []);
 
-    //console.log(jobTitle)
 
     return(
         <div className="containerRegister">
@@ -96,7 +78,7 @@ function Register() {
                         />
 
                         <label htmlFor="avatar_user">Avatar</label>
-                        <select name="avatar_user" onChange={handleChange} value={user.avatar_user}>
+                        <select name="avatar_user" onChange={handleChange} value={user.avatar_user} defaultValue={"userDefault"}>
                             <option value="userDefault">Padrão</option>
                             <option value="woman">Mulher</option>
                             <option value="man">Homen</option>
