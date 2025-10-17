@@ -3,9 +3,7 @@ import React, {useEffect, useState} from "react";
 import AlertMessage from "../../components/alertMessage";
 import AssetLogin from "../../assets/SamsungDevices.jpg";
 import axios from "axios";
-
 import "./register.scss";
-
 
 function Register() {
     const navigate = useNavigate();
@@ -35,11 +33,9 @@ function Register() {
         e.preventDefault();
         try {
             const res = await axios.post("http://localhost:5000/mycheil/user", user);
-            setMessage("Usuario registrado com sucesso!");
             navigate("/login");
 
         } catch (error) {
-            console.log(error.response.data)
             setMessage({
                 type: "error",
                 message: error.response.data.errors[0],
@@ -127,8 +123,6 @@ function Register() {
                             <span>Ja tem conta? <Link to="/">
                             <b>click aqui</b></Link></span>
                         </div>
-                        
-                        
                     </form>
                 </div>
             </div>
