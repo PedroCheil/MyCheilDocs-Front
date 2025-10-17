@@ -1,6 +1,6 @@
 import { useNavigate, Link } from "react-router-dom";
 import React, {useEffect, useState} from "react";
-
+import AlertMessage from "../../components/alertMessage";
 import AssetLogin from "../../assets/SamsungDevices.jpg";
 import axios from "axios";
 
@@ -10,7 +10,11 @@ import "./register.scss";
 function Register() {
     const navigate = useNavigate();
     const [jobTitle, setJobTitle] = useState([]);
-    const [message, setMessage] = useState("");
+    const [message, setMessage] = useState({
+        type: "",
+        message: "",
+        visible: false
+    });
     const [user, setUser] = useState({
         name_user: "",
         login_user: "",
@@ -18,6 +22,7 @@ function Register() {
         avatar_user: "",
         job_position_fk: ""
     })
+
 
     const handleChange = (e) => {
         setUser({
@@ -34,7 +39,12 @@ function Register() {
             navigate("/login");
 
         } catch (error) {
-            setMessage("Erro ao registrar usuario");
+            console.log(error.response.data)
+            setMessage({
+                type: "error",
+                message: error.response.data.errors[0],
+                visible: true
+            })
         }
     }   
 
@@ -45,6 +55,14 @@ function Register() {
 
     return(
         <div className="containerRegister">
+            {message.visible && (
+                            <AlertMessage 
+                                typeAlert={message.type}
+                                messageAlert={message.message}
+                                durationTime={3000}
+                                onClose={() => setMessage({...message, visible: false})}
+                            />
+                        )}
             <div className="containerImage">
                 <img src={AssetLogin} alt="" />
             </div>
@@ -66,7 +84,8 @@ function Register() {
                         placeholder="email@cheil.com"
                         value={user.login_user}
                         onChange={handleChange}
-                        required />
+                        required
+                         />
 
                         <label htmlFor="password_user">Senha</label>
                         <input type="password" 
@@ -88,6 +107,7 @@ function Register() {
                         <select name="job_position_fk" 
                         value={user.job_position_fk}
                         onChange={handleChange}>
+                            <option value="">Selecione um cargo</option>
                             {jobTitle.map((job) => (
                                 <option key={job._id} value={job._id}>{job.name_job}
                                 </option>
@@ -107,6 +127,7 @@ function Register() {
                             <span>Ja tem conta? <Link to="/">
                             <b>click aqui</b></Link></span>
                         </div>
+                        
                         
                     </form>
                 </div>

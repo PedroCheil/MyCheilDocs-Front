@@ -5,19 +5,18 @@ import Login from './screens/Login';
 import Register from './screens/Register';
 import './reset.scss';
 import Feed from './screens/Feed';
+import AnimatedRoutes from './routes/AnimationRoutes';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
-    <Routes>
-      <Route path='/' element={<Login />} />
-      <Route path='/login' element={<Login />} />
-      <Route path='/register' element={<Register />} />
-      <Route path='/feed' element={<Feed />} />
-    </Routes>
+    <AnimatedRoutes />
   </BrowserRouter>
 )
-/*
-<StrictMode>
-    <Login /> 
-</StrictMode>,
+/* 
+<Routes>
+  <Route path='/' element={<Login />} />
+  <Route path='/login' element={<Login />} />
+  <Route path='/register' element={<Register />} />
+  <Route path='/feed' element={<Feed />} />
+</Routes>
 */
