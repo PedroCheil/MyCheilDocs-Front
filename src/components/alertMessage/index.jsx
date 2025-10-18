@@ -2,13 +2,14 @@ import { useEffect, useState } from 'react'
 import './alertMessage.scss'
 
 
-function AlertMessage({typeAlert, messageAlert, style, durationTime = 3000}){
+function AlertMessage({typeAlert, messageAlert, style, durationTime = 3000, onClose}){
 
     const [visible, setVisible] = useState(true);
 
     useEffect(() => {
         const timer = setTimeout(() => {
             setVisible(false);
+            if(onClose) onClose();
         }, durationTime);
 
         return () => clearTimeout(timer);
@@ -32,9 +33,9 @@ function AlertMessage({typeAlert, messageAlert, style, durationTime = 3000}){
         style={{
             backgroundColor: colorContainer[typeAlert] || '#FFF',
             color: colorText[typeAlert] || '#000',
-            padding: '6px',
+            padding: '6px 12px',
             borderRadius: '18px',
-            width: '160px',
+            width: 'auto',
             position: 'absolute',
             textAlign : 'center',
             top: '25px',
