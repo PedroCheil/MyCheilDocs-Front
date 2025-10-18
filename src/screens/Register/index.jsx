@@ -17,7 +17,7 @@ function Register() {
         name_user: "",
         login_user: "",
         password_user: "",
-        avatar_user: "",
+        avatar_user: "userDefault",
         job_position_fk: ""
     })
 
@@ -93,10 +93,10 @@ function Register() {
                         />
 
                         <label htmlFor="avatar_user">Avatar</label>
-                        <select name="avatar_user" onChange={handleChange} value={user.avatar_user} defaultValue={"userDefault"}>
-                            <option value="userDefault">Padrão</option>
-                            <option value="woman">Mulher</option>
-                            <option value="man">Homen</option>
+                        <select name="avatar_user" onChange={handleChange} value={user.avatar_user}>
+                            <option value="userDefault">👤 Padrão</option>
+                            <option value="woman">👩 Mulher</option>
+                            <option value="man">👨 Homem</option>
                         </select>
 
                         <label htmlFor="job_position_fk">Job</label>
