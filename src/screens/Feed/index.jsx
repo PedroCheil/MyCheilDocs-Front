@@ -1,8 +1,8 @@
 function Feed() {
     return(
-        <>
-            <h2>Chamando a pagina de Feed</h2>
-        </>
+        <div className="p-4 max-w-md mx-auto">
+            <h1 className="text-3x1 font-bold text-center text-blue-500">Feed do Cheil docs</h1>
+        </div>
     )
 }
 
