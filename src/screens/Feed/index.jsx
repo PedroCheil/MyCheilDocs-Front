@@ -1,7 +1,12 @@
+import HeaderApplication from "../../components/header";
+
 function Feed() {
     return(
         <>
-            <h2>Chamando a pagina de Feed</h2>
+        <HeaderApplication />
+        <div className="">
+            <h1 className="">Feed do Cheil docs</h1>
+        </div>
         </>
     )
 }
