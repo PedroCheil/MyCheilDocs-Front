@@ -1,8 +1,16 @@
-function UserIcon() {
+import {Mars, Users, Venus}  from 'lucide-react';
+
+function UserIcon({typeUser}) {
+
+    const icons = {man: Mars, woman: Venus, group: Users}
+    const IconComponent = icons[typeUser] || Users;
+
     return(
-        <>
-            <span>Chamando icone de usuario</span>
-        </>
+        <div className="">
+            <span>Pedro</span>
+            <IconComponent className="" />
+            
+        </div>
     )
 }
 
