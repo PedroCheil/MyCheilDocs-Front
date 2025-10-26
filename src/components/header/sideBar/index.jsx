@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { BugPlay, Pencil, ClipboardCheck, HeartHandshake, Earth, ChevronLeft, ChevronRight } from "lucide-react";
+import "./sideBar.scss";
 
 function SideBar(){
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const menuJobFilter = [
     {job: "All", icon: Earth},
     {job: "Account", icon: ClipboardCheck},
@@ -12,19 +13,23 @@ function SideBar(){
 ]
 
     return(
-      <div className="">
+      <div className="containerMenu">
+        <span>Ativar menu</span>
+        <div className="containerButtons">
+
         {menuJobFilter.map((menu, index) => { 
           const IconJob = menu.icon;
           console.log(IconJob);
           return(
-              <button className="">
-                <IconJob size={24} />
+            <button className="munuIcons">
+                <IconJob size={45} />
                 {isOpen &&(
                   <span key={index}>{menu.job}</span>
                 )}
               </button>
           )
         })}
+        </div>
       </div>
     )
 }
