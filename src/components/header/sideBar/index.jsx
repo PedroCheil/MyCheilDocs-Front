@@ -28,6 +28,7 @@ function SideBar({isActiveMenu}){
               </button>
           )
         })}
+        </div>
       </div>
     )
 }
