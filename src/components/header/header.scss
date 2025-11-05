@@ -1,0 +1,11 @@
+.containerHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 25px;
+    align-items: center;
+    background-color: rgb(245, 245, 245);
+
+    #hamburguerMenu{
+        display: none;
+    }
+}

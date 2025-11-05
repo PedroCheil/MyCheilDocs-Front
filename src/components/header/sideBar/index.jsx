@@ -1,25 +1,28 @@
-import { useState } from "react";
-import { BugPlay, Pencil, ClipboardCheck, HeartHandshake, Earth, ChevronLeft, ChevronRight } from "lucide-react";
+import { useEffect } from "react";
+import { BugPlay, Pencil, ClipboardCheck, HeartHandshake, Earth } from "lucide-react";
+import "./navBar.scss";
 
-function SideBar(){
-  const [isOpen, setIsOpen] = useState(false);
+function SideBar({isActiveMenu}){
+
   const menuJobFilter = [
     {job: "All", icon: Earth},
     {job: "Account", icon: ClipboardCheck},
     {job: "Publisher", icon: Pencil},
     {job: "QA", icon: BugPlay},   
     {job: "RH", icon: HeartHandshake}, 
-]
+] 
+  useEffect(() => {
+    console.log("Menu alterado", isActiveMenu)
+  }, [isActiveMenu])
 
     return(
-      <div className="">
+      <div className={`containerNavBar ${isActiveMenu ? "sideBarIsOpen" : "sideBarIsClosed"}`}>
         {menuJobFilter.map((menu, index) => { 
           const IconJob = menu.icon;
-          console.log(IconJob);
           return(
-              <button className="">
+              <button className={`buttonNavBar ${isActiveMenu ? "" : ""}`}>
                 <IconJob size={24} />
-                {isOpen &&(
+                {isActiveMenu &&(
                   <span key={index}>{menu.job}</span>
                 )}
               </button>
@@ -28,23 +31,5 @@ function SideBar(){
       </div>
     )
 }
-/*
 
-<div className="flex flex-col h-full w-64 border p-8 bg-pink-500">
-        {menuJobFilter.map((menu, index) => { 
-          const IconJob = menu.icon;
-          console.log(IconJob);
-          return(
-            <>
-              <button className="bg-pink-500">
-                <IconJob size={24} />
-                {isOpen &&(
-                  <span key={index}>{menu.job}</span>
-                )}
-              </button>
-            </>
-          )
-        })}
-      </div>
-*/
 export default SideBar;
