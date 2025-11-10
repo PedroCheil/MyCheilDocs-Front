@@ -1,4 +1,5 @@
 import HeaderApplication from "../../components/header";
+import Card from "../../components/post/card";
 import "./feed.scss";
 
 function Feed() {
@@ -6,7 +7,11 @@ function Feed() {
         <>
         <HeaderApplication />
         <div className="containerFeed">
-            <h1 className="">Feed do Cheil docs</h1>
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            
         </div>
         </>
     )

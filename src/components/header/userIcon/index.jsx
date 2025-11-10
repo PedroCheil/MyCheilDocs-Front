@@ -1,4 +1,5 @@
 import {Mars, Users, Venus}  from 'lucide-react';
+import "./userIcon.scss";
 
 function UserIcon({typeUser}) {
 
@@ -6,10 +7,9 @@ function UserIcon({typeUser}) {
     const IconComponent = icons[typeUser] || Users;
 
     return(
-        <div className="">
-            <span>Pedro</span>
-            <IconComponent className="" />
-            
+        <div className="containerIcon">
+            <span className='iconName'>Pedro</span>
+            <IconComponent />
         </div>
     )
 }

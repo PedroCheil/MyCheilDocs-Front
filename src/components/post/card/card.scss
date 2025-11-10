@@ -1,0 +1,68 @@
+.containerCard{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    width: 80%;
+    padding: 22px 20px;
+    border-radius: 8px;
+    .containerCardHeader{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .cardHeaderUser{
+            display: flex;
+            align-items: center;
+            .userImage{
+                margin: 5px;
+            }
+            .userInfos{
+                display: flex;
+                flex-direction: column;
+                margin-left: 12px;
+                .userName{
+                    font-size: 1.2em;
+                    font-weight: bold;
+                }
+                .userPosition{
+                    .position{
+                        font-size: 0.8em;
+                        padding: 2px 8px;
+                        border-radius: 8px;
+                        background-color: rgb(236, 236, 236);
+                    }
+                }
+            }
+        
+        }
+    }
+
+    .containerCardPost{
+        margin: 18px 0px;
+        .cardPostTitle{
+            display: flex;
+            flex-direction: column;
+            .postTitle{
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+            .postSector{
+                font-size: 1em;
+                .sector{
+                    font-size: 0.8em;
+                    padding: 2px 8px;
+                    border-radius: 8px;
+                    background-color: rgb(185, 185, 185);
+                }
+            }
+        }
+
+        .cardPostInfo{
+            margin: 18px 0px;
+        }
+
+        .cardPostData{
+            display: flex;
+            justify-content: end;
+            padding: 0px 18px;
+        }
+
+    }
+}
