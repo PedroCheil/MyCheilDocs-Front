@@ -1,0 +1,28 @@
+.containerMenu{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+        .containerButtons{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 50px;
+        left: 0px;
+        height: 100vh;
+        padding: 15px 5px;
+        
+        .munuIcons{
+            background-color: transparent;
+            border: none;
+            margin: 10px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            height: 65px;
+        }
+    }
+    
+}
