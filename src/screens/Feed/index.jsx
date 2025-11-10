@@ -1,4 +1,5 @@
 import HeaderApplication from "../../components/header";
+import Card from "../../components/post/card";
 import "./feed.scss";
 
 function Feed() {
@@ -6,45 +7,11 @@ function Feed() {
         <>
         <HeaderApplication />
         <div className="containerFeed">
-            <div className="cardPost">
-                <div className="cardPostTitle">
-                    <span>Titulo post</span>
-                    <span>UserPost</span>
-                </div>
-                <div className="cardPostDescription">
-                    <p>Postagem sobre metodos de emagrecimento ete...</p>
-                </div>
-                <div className="cardPostData">
-                    <span>Data postagem</span>
-                </div>
-
-            </div>
-            <div className="cardPost">
-                <div className="cardPostTitle">
-                    <span>Titulo post</span>
-                    <span>UserPost</span>
-                </div>
-                <div className="cardPostDescription">
-                    <p>Postagem sobre metodos de emagrecimento ete...</p>
-                </div>
-                <div className="cardPostData">
-                    <span>Data postagem</span>
-                </div>
-
-            </div>
-            <div className="cardPost">
-                <div className="cardPostTitle">
-                    <span>Titulo post</span>
-                    <span>UserPost</span>
-                </div>
-                <div className="cardPostDescription">
-                    <p>Postagem sobre metodos de emagrecimento ete...</p>
-                </div>
-                <div className="cardPostData">
-                    <span>Data postagem</span>
-                </div>
-
-            </div>
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            
         </div>
         </>
     )

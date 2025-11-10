@@ -12,7 +12,7 @@ function SideBar({isActiveMenu}){
     {job: "RH", icon: HeartHandshake}, 
 ] 
   useEffect(() => {
-    console.log("Menu alterado", isActiveMenu)
+    
   }, [isActiveMenu])
 
     return(
