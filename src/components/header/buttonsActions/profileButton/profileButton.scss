@@ -1,0 +1,12 @@
+.buttonProfile{
+    background-color: transparent;
+    border: none;
+    font-weight: lighter;
+    cursor: pointer;
+    transition: all 0.7s ease-in-out;
+    padding: 4px 0px;
+
+    &:hover{
+        background-color: rgb(245, 245, 245);
+    }
+}

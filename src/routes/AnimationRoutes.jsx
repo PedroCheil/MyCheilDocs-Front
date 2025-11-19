@@ -1,6 +1,7 @@
 import {Routes, Route, useLocation} from 'react-router-dom';
 import {AnimatePresence, motion} from 'framer-motion';
 
+import ProtectedRoute from './ProtectedRoute';
 import Login from '../screens/Login';
 import Register from '../screens/Register';
 import Feed from '../screens/Feed';
@@ -45,9 +46,11 @@ export default function AnimatedRoutes() {
                 <Route 
                     path='/feed'
                     element={
-                        <motion.div style={{ height: "100vh", overflow: "hidden" }} {...pageTransition}>
-                            <Feed />
-                        </motion.div>
+                        <ProtectedRoute>
+                            <motion.div style={{ height: "100vh", overflow: "hidden" }} {...pageTransition}>
+                                <Feed />
+                            </motion.div>
+                        </ProtectedRoute>
                     }
                 />
             </Routes>
