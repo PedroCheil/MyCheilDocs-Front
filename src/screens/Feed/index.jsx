@@ -4,16 +4,19 @@ import "./feed.scss";
 
 function Feed() {
     return(
-        <>
-        <HeaderApplication />
-        <div className="containerFeed">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            
+        <div className="feed">
+            <HeaderApplication />
+            <div className="containerFeed">
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                
+            </div>
+            <div>
+                <h1>footer</h1>
+            </div>
         </div>
-        </>
     )
 }
 

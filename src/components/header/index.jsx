@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import "./header.scss";
 import { useState } from "react";
 
+
 function HeaderApplication() {
   const [activeMenu, setActiveMenu] = useState(false);
   const handleCheckboxChange = (e) => {
@@ -22,7 +23,7 @@ function HeaderApplication() {
             onChange={handleCheckboxChange}
           />
           <h2>MyCheil-DOCS</h2>
-        <UserIcon typeUser="group"/>
+          <UserIcon typeUser="group"/>
     </div>
   );
 }
